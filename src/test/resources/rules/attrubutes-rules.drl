@@ -1,0 +1,119 @@
+package rules;
+//dialect  "mvel"
+
+//rule "attrubutes-rules-1"
+//salience 1 //设置执行顺序
+//    when
+//        eval(true)
+//    then
+//        System.out.println("salience 1 ....");
+//end
+//
+//rule "attrubutes-rules-2"
+//salience 2 //设置执行顺序
+//    when
+//        eval(true)
+//    then
+//        System.out.println("salience 2 ....");
+//end
+
+//rule "attrubutes-rules-3"
+//    date-effective "2022-1-10" //设置有效时间
+//    when
+//        eval(true)
+//    then
+//        System.out.println("date-effective ....");
+//end
+
+//rule "attrubutes-rules-4"
+//    date-expires "2022-1-10" //设置有效时间
+//    when
+//        eval(true)
+//    then
+//        System.out.println("date-expires ....");
+//end
+
+//rule "attrubutes-rules-5"
+//    activation-group "group"
+//    when
+//        eval(true)
+//    then
+//        System.out.println("activation-group 5 ...");
+//    end
+//
+//rule "attrubutes-rules-6"
+//    activation-group "group"
+//    when
+//        eval(true)
+//    then
+//        System.out.println("activation-group 6 ...");
+//end
+
+//rule "attrubutes-rules-7"
+//    agenda-group "007"
+//    when
+//        eval(true)
+//    then
+//        System.out.println("agenda-group 7 ...");
+//    end
+//
+//rule "attrubutes-rules-8"
+//    agenda-group "008"
+//    when
+//        eval(true)
+//    then
+//        System.out.println("agenda-group 8 ...");
+//end
+//
+//rule "attrubutes-rules-9"
+//    agenda-group "009"
+//    when
+//        eval(true)
+//    then
+//        System.out.println("agenda-group 9 ...");
+//    end
+//
+//rule "attrubutes-rules-10"
+//    agenda-group "010"
+//    auto-focus
+//    when
+//        eval(true)
+//    then
+//        System.out.println("agenda-group 10 ...");
+//end
+//
+//
+//import java.text.SimpleDateFormat
+//import java.util.Date
+///*
+//测试timer属性
+//*/
+//rule "attrubutes-rules-11"
+//    //含义：5秒后触发，然后每隔2秒触发⼀次
+//    timer (5s 2s)
+//    when
+//    then
+//        System.out.println("attrubutes-rules-11 timer " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+//end
+//rule "attrubutes-rules-12"
+//    //cron 语法 含义：每隔1秒触发⼀次
+//    timer (cron:0/1 * * * * ?)
+//    when
+//    then
+//        System.out.println("attrubutes-rules-12 timer " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+//end
+
+//import cn.flowboot.entity.Customer;
+//
+//
+//rule "attrubutes-rules-13"
+//    no-loop true
+//    when
+//       $customer:Customer(name == "李四")
+//    then
+//        $customer.setName("李四");
+//        update($customer);
+//        System.out.println("no-loop....");
+//end
+
+

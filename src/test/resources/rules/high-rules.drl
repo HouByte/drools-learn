@@ -1,0 +1,45 @@
+package rules;
+
+//global java.util.List globalList;
+//
+//rule "high-rules-1"
+//    when
+//        eval(true)
+//    then
+//        globalList.add("high-rules-1");
+//end
+//
+//rule "high-rules-2"
+//    when
+//        eval(true)
+//    then
+//        globalList.add("high-rules-2");
+//        System.out.println("globalList size: "+globalList.size() +" toString "+globalList);
+//end
+
+
+//function String format(String name) {
+//	return "Hi " + name;
+//}
+//
+//rule "high-rules-3"
+//    when
+//      eval(true)
+//    then
+//        //调⽤上⾯定义的函数
+//        String ret = format("jack");
+//        System.out.println(ret);
+//end
+
+import cn.flowboot.entity.Order;
+
+//不带参数的查询
+//当前query⽤于查询Working Memory中amout > 100的Person对象
+query "high-rules-query-1"
+    $order : Order( amout > 100)
+end
+//带有参数的查询
+////当前query⽤于查询Working Memory中amout > 参数amoutParam
+query "high-rules-query-2"(Double amoutParam)
+    $order : Order(amout > amoutParam)
+end

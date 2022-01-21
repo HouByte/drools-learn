@@ -1,0 +1,91 @@
+package rules;
+
+import cn.flowboot.entity.*
+import cn.flowboot.entity.Customer;
+
+//rule "customer-rules-1"
+//    when
+//    $order:Order();
+//    $customer:Customer(orderList contains $order)
+//    then
+//    System.out.println("orderList 包含 $order");
+//end
+//
+//rule "customer-rules-2"
+//    when
+//    $order:Order();
+//    $customer:Customer(orderList not contains $order)
+//    then
+//    System.out.println("orderList 不包含 $order");
+//end
+//
+//rule "customer-rules-3"
+//    when
+//    Customer(name matches "张.*")
+//    then
+//    System.out.println("name matches 张.*");
+//end
+//
+//rule "customer-rules-4"
+//    when
+//    Customer(name not matches "张.*")
+//    then
+//    System.out.println("name not matches 张.*");
+//end
+
+//rule "customer-rules-5"
+//    when
+//        eval(true)
+//    then
+//    Customer cus = new Customer();
+//    cus.setName("张三");
+//    insert(cus);
+//    System.out.println("insert....");
+//end
+//
+//rule "customer-rules-6"
+//    when
+//        $customer:Customer(name == "张三")
+//    then
+//        System.out.println("insert 获取名字为张三的对象 $customer  name :"+$customer.getName());
+//
+//end
+
+
+//rule "customer-rules-7"
+//    no-loop true
+//    when
+//       $customer:Customer(name == "李四")
+//    then
+//        $customer.setName("张三");
+//        update($customer);
+//        System.out.println("update....");
+//end
+//
+//rule "customer-rules-8"
+//    when
+//        $customer:Customer(name == "张三")
+//    then
+//        System.out.println("update get $customer  name :"+$customer.getName());
+//
+//end
+
+//rule "customer-rules-9"
+//    no-loop true
+//    when
+//       $customer:Customer(name == "李四")
+//    then
+//
+//        retract($customer);
+//        System.out.println("retract....");
+//end
+//
+//rule "customer-rules-10"
+//    when
+//        $customer:Customer()
+//    then
+//        System.out.println("retract 获取名字为张三的对象 $customer  name :"+$customer.getName());
+//
+//end
+
+
